@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+$desktop-view: 1440px;
+$mobile-view: 375px;
+$Primary1: hsl(225, 100%, 94%);
+$Primary2: hsl(245, 75%, 52%);
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: hsl(225, 100%, 94%);
+    font-family: 'red hat display';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    a{
+        &:hover {
+            opacity: .75;
+        }
+    }
+}
+
+img{
+    max-width: 100%;
+    border-radius: 25px 25px 0 0;
+}
+
+.cardComponent {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    max-width: 325px;
+    margin: 30px auto;
+
+    p {
+        font-size: 14px;
+        color: grey;
+        padding: 0 30px;
+        margin-top: 0;
+        line-height: 30px;
+    }
+
+    h2{
+        font-size: 22px;
+        color: hsl(223, 47%, 23%);
+        font-weight: 900;
+    }
+
+    li{
+        list-style-type: none;
+        padding: 0;
+        font-weight: 900;
+        color: hsl(223, 47%, 23%);
+
+    }
+
+    .price {
+        color: grey;
+        font-weight: 500;
+        font-size: 13px;
+    }
+
+    ul{
+        padding: 0;
+    }
+
+    .content{
+     background-color: white;
+     text-align: center;
+     border-radius: 0 0 25px 25px;
+     -webkit-box-shadow: 2px 11px 13px -9px rgba(0,0,0,0.63); 
+    box-shadow: 2px 11px 13px -9px rgba(0,0,0,0.63);
+    }
+
+    .middleSection{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        a{
+            font-size: 13px;
+        }
+
+        img{
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+}
+
+.bottomCard {
+    margin-top: 20px;
+
+       .PaymentCTA {
+        border: 3px solid hsl(245, 75%, 52%);
+        color: white;
+        text-decoration: none;
+        background-color: hsl(245, 75%, 52%);
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 10px;
+        padding: 10px 70px;
+        -webkit-box-shadow: 2px 11px 13px -9px rgba(0,0,0,0.63); 
+    box-shadow: 2px 11px 13px -9px rgba(0,0,0,0.63);
+        }
+
+        p {
+        margin-top: 20px;
+        }
+
+        a{
+            color: grey;
+            text-decoration: none;
+        }
+
+}
+
+.image {
+    display: flex;
+    
+}
+
+@media only screen and (min-width: $desktop-view) {
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .cardComponent {
+        max-width: 450px;
+        
+    }
+    
+    .middleSection{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a{
+            font-size: 15px;
+        }
+
+        img{
+            width: 40px;
+            height: 40px;
+        }
+
+        .price{
+            font-size: 15px;
+        }
+    }
+
+    .bottomCard {
+        margin-top: 40px;
+    
+           .PaymentCTA {
+            border: 3px solid hsl(245, 75%, 52%);
+            color: white;
+            text-decoration: none;
+            background-color: hsl(245, 75%, 52%);
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 10px;
+            padding: 10px 100px;
+            
+            }
+    
+            p {
+            margin-top: 30px;
+            font-size: 14px;
+            }
+    
+            a{
+                color: grey;
+                text-decoration: none;
+            }
+    
+    }
+
+    .content {
+        h2{
+            font-size: 25px;
+            margin-top: 40px;
+        }
+
+        p{
+            padding: 0 80px;
+            font-size: 15px;
+        }
+    }
+}
